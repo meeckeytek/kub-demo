@@ -4,7 +4,7 @@ metadata:
   name: users-service
 spec:
   selector:
-    name: user
+    name: users
   ports:
     - protocol: TCP
       port: 8080
@@ -27,4 +27,7 @@ spec:
     spec:    
       containers:
         - name: user-image
-          image: meeckey/kub-demo-users
+          image: meeckey/kub-demo-users:latest
+          env:
+            - name: AUTH_URI
+              value: auth-service.default
