@@ -24,7 +24,7 @@ spec:
     metadata:
       labels:
         name: frontend
-    spec:
+    spec:    
       containers:
         - name: frontend-image
-          image: meeckey/frontend:latest
+          image: meeckey/kub-demo-frontend:latest
